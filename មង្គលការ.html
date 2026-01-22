@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ធៀបអញ្ជើញរៀបការ - វណ្ណា & វណ្ណឆៃ</title>
+	<style>
+		
+		@import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300;400;700&family=Moul&display=swap');
+
+		body {
+			margin: 0; font-family: 'Kantumruy Pro', sans-serif;
+			background-color: #fdfaf6; color: #333; text-align: center;
+			overflow-x: hidden;
+		}
+	   
+		.main-header {
+			background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000');
+			background-size: cover; background-position: center;
+			height: 45vh; display: flex; align-items: center; justify-content: center; color: white;
+		}
+
+		h1 { font-family: 'Moul', serif; color: #d4af37; font-size: 1.4rem; margin: 10px 0; }
+		h2 { font-family: 'Moul', serif; color: #8b0000; font-size: 1.2rem; margin-top: 25px; }
+
+		
+		.countdown-section { padding: 20px; background: white; margin: -40px 20px 20px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); position: relative; z-index: 10; }
+		#countdown { display: flex; justify-content: center; gap: 8px; }
+		.time-box { background: #8b0000; color: white; padding: 10px; border-radius: 8px; min-width: 55px; }
+		.time-box span { font-size: 1.2rem; font-weight: bold; display: block; }
+
+		@keyframes neon-glow {
+			0%, 100% { box-shadow: 0 0 5px #ff69b4; border-color: #ff69b4; }
+			50% { box-shadow: 0 0 15px #d4af37; border-color: #d4af37; }
+		}
+		.grid-item {
+			background: white; padding: 15px; border-radius: 12px; margin: 10px auto; width: 85%;
+			border: 2px solid transparent; animation: neon-glow 2s infinite ease-in-out;
+			transition: transform 0.3s;
+		}
+
+		.photo-grid {
+			display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; padding: 20px;
+		}
+		.photo-grid img {
+			width: 100%; height: 140px; object-fit: cover; border-radius: 10px;
+			box-shadow: 0 4px 6px rgba(0,0,0,0.1); border: 2px solid #fff;
+		}
+
+		.qr-container { 
+			width: 140px; height: 140px; margin: 15px auto; border: 1px solid #d4af37;
+			border-radius: 10px; background: white; display: flex; align-items: center; justify-content: center; overflow: hidden;
+		}
+		.qr-container img { width: 90%; height: 90%; object-fit: contain; }
+
+		.heart { position: fixed; top: -10px; font-size: 20px; color: #ff69b4; pointer-events: none; z-index: 999; animation: fall linear forwards; }
+		@keyframes fall { to { transform: translateY(100vh) rotate(360deg); opacity: 0; } }
+
+		#music-control { position: fixed; bottom: 20px; left: 20px; width: 50px; height: 50px; background: #d4af37; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 1000; }
+		.rotate { animation: rotateMusic 4s infinite linear; }
+		@keyframes rotateMusic { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+		.btn-copy { background: #d4af37; color: white; border: none; padding: 8px 18px; border-radius: 20px; cursor: pointer; margin-top: 10px; font-family: 'Kantumruy Pro'; }
+	</style>
+</head>
+<body>
+
+	<header class="main-header">
+		<div>
+			<h3>សិរីសួស្តីអាពាហ៍ពិពាហ៍</h3>
+			<h1>វណ្ណា វណ្ណឆៃ & អនាគតភរិយា</h1>
+			<p>ថ្ងៃសៅរ៍ ទី០៩ ខែកញ្ញា ឆ្នាំ២០២៨</p>
+		</div>
+	</header>
+   <section class="invitation-text">
+		<h2>សូមគោរពអញ្ជើញ</h2>
+		<div class="underline"></div>
+		<p class="content-p">
+			ឯកឧត្តម លោកឧកញ៉ា លោកជំទាវ លោក លោកស្រី អ្នកនាងកញ្ញា និងប្រិយមិត្តជិតឆ្ងាយទាំងអស់...
+			<br><br>
+			នៅគេហដ្ឋានខាងស្រី សុំលាក់សិន។
+		</p>
+	<section>
+
+	<div class="countdown-section">
+		<p style="margin-top:0; font-size: 14px;">រង់ចាំក្នុងរយៈពេល</p>
+		<div id="countdown">
+			<div class="time-box"><span id="days">00</span><p style="margin:0;font-size:10px">ថ្ងៃ</p></div>
+			<div class="time-box"><span id="hours">00</span><p style="margin:0;font-size:10px">ម៉ោង</p></div>
+			<div class="time-box"><span id="minutes">00</span><p style="margin:0;font-size:10px">នាទី</p></div>
+			<div class="time-box"><span id="seconds">00</span><p style="margin:0;font-size:10px">វិ</p></div>
+		</div>
+	</div>
+
+	<section>
+		<h2>ម៉ោងកម្មវិធី</h2>
+		<div class="grid-item"><strong>ម៉ោង ៦:០០ ព្រឹក</strong><br>ពិធីជួបជុំបងប្អូន</div>
+		<div class="grid-item"><strong>ម៉ោង ៦:៣០ ព្រឹក</strong><br>ពិធីក្រុងពាលី</div>
+		<div class="grid-item"><strong>ម៉ោង ៧:០០ ព្រឹក</strong><br>ពិធីហែជំនូន</div>
+		<div class="grid-item"><strong>ម៉ោង ៧:៣០ ព្រឹក</strong><br>ពិធីកាត់សក់បង្កក់សិរី</div>
+	</section>
+
+	<section>
+		<h2>រូបថតអនុស្សាវរីយ៍</h2>
+		<div class="photo-grid">
+			<img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc" alt="Photo 1">
+			<img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed" alt="Photo 2">
+			<img src="https://images.unsplash.com/photo-1519741497674-611481863552" alt="Photo 3">
+			<img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc" alt="Photo 4">
+		</div>
+	</section>
+
+	<section style="margin-bottom: 50px;">
+		<h2>ផ្ញើចំណងដៃតាមអនឡាញ</h2>
+		<div style="background:white; padding:20px; border-radius:15px; margin: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+			<div class="qr-container">
+				<img src="https://i.ibb.co/V0T63mxz/IMG-7956.jpg" alt="ABA QR">
+			</div>
+			<p><strong>093 800 659</strong></p>
+			<p>វណ្ណា វណ្ណឆៃ</p>
+			<button class="btn-copy" onclick="copyText('093800659')">ចម្លងលេខគណនី</button>
+		</div>
+	</section>
+
+	<div id="music-control" onclick="toggleMusic()">
+		<span id="music-icon">🎶</span>
+		<audio id="weddingSong" loop>
+			<source src="https://pomf2.lain.la/f/i3wfwipk.mp3" type="audio/mpeg">
+		</audio>
+	</div>
+
+	<script>
+
+		const weddingDate = new Date(2028, 8, 9, 7, 0, 0).getTime();
+		function updateCountdown() {
+			const now = new Date().getTime();
+			const dist = weddingDate - now;
+			const d = Math.floor(dist / (1000 * 60 * 60 * 24));
+			const h = Math.floor((dist % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			const m = Math.floor((dist % (1000 * 60 * 60)) / (1000 * 60));
+			const s = Math.floor((dist % (1000 * 60)) / 1000);
+			
+			document.getElementById("days").innerText = d < 10 ? "0" + d : d;
+			document.getElementById("hours").innerText = h < 10 ? "0" + h : h;
+			document.getElementById("minutes").innerText = m < 10 ? "0" + m : m;
+			document.getElementById("seconds").innerText = s < 10 ? "0" + s : s;
+		}
+		setInterval(updateCountdown, 1000);
+		updateCountdown();
+
+		function createHeart() {
+			const heart = document.createElement('div');
+			heart.classList.add('heart');
+			heart.innerHTML = '❤️';
+			heart.style.left = Math.random() * 100 + 'vw';
+			heart.style.animationDuration = Math.random() * 3 + 2 + 's';
+			document.body.appendChild(heart);
+			setTimeout(() => heart.remove(), 5000);
+		}
+		setInterval(createHeart, 500);
+
+		function toggleMusic() {
+			const audio = document.getElementById("weddingSong");
+			const btn = document.getElementById("music-control");
+			if (audio.paused) { audio.play(); btn.classList.add("rotate"); } 
+			else { audio.pause(); btn.classList.remove("rotate"); }
+		}
+		
+		document.addEventListener('touchstart', () => {
+			const audio = document.getElementById("weddingSong");
+			if (audio.paused) { audio.play(); document.getElementById("music-control").classList.add("rotate"); }
+		}, { once: true });
+
+		function copyText(num) {
+			navigator.clipboard.writeText(num);
+			alert("បានចម្លងលេខគណនី: " + num);
+		}
+	</script>
+<section class="map-section">
+	<h2>ទីតាំងកម្មវិធី</h2>
+	<div class="map-card">
+		<iframe 
+			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3908.770663781234!2d104.890123456789!3d11.567890123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTHCsDM0JzA0LjQiTiAxMDTCsDUzJzI0LjQiRQ!5e0!3m2!1skm!2skh!4v1234567890" 
+			width="100%" height="200" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy">
+		</iframe>
+		
+		<a href="https://maps.app.goo.gl/qEsHH7yRKu4rBLrk8?g_st=ic" target="_blank" class="btn-map">
+			📍 បើកមើលក្នុង Google Maps
+		</a>
+	</div>
+</section>
+
+</body>
+</html>
