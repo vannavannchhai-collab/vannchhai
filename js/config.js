@@ -5,7 +5,7 @@
      telegram: "vitstore"      → https://t.me/vitstore
      telegram: "+855967925615"  → https://t.me/+85512345678
    ══════════════════════════════════════════════════════ */
-window.VITSTORE_CONFIG = {
+window.VITSTORE_CONFIG = Object.freeze({
   storeName: "Vitstore",
   telegram: "idgafidgaf3",              // ← ដាក់ username ឬលេខទូរស័ព្ទ Telegram របស់ហាង
   phone: "+855967925615",          // ← លេខទូរស័ព្ទបង្ហាញលើគេហទំព័រ
@@ -14,4 +14,4 @@ window.VITSTORE_CONFIG = {
   openDays: "រាល់ថ្ងៃ (ច័ន្ទ — អាទិត្យ)",
   usdToKhr: 4100,                    // អត្រាប្ដូរប្រាក់ សម្រាប់បង្ហាញតម្លៃរៀល
   freeShipNote: "ដឹកជញ្ជូនឥតគិតថ្លៃ ក្នុងស្រុកល្វាឯម"
-};
+});
