@@ -74,6 +74,14 @@
     if (card) card.setAttribute("href", "tel:" + String(settings.phone || "").replace(/[^\d+]/g, ""));
     const addr = $("#contactAddr");
     if (addr) addr.textContent = settings.address || "";
+    const footerAddr = $("#footerAddr");
+    if (footerAddr) footerAddr.textContent = settings.address || "";
+    // short place name = last segment of the address ("កោះកែវ, ល្វាឯម, កណ្ដាល" → "កណ្ដាល")
+    const parts = String(settings.address || "").split(",").map((x) => x.trim()).filter(Boolean);
+    const shortArea = parts.length ? parts[parts.length - 1] : "";
+    $$('[data-store="shortArea"]').forEach((el) => (el.textContent = shortArea || "ស្នួល"));
+    $$('[data-store="freeShip"]').forEach((el) => (el.textContent = settings.freeShipNote || "ដឹកជញ្ជូនឥតគិតថ្លៃ"));
+    $$('[data-store="freeShipNote"]').forEach((el) => (el.textContent = settings.freeShipNote || "ដឹកជញ្ជូនឥតគិតថ្លៃ"));
     $$(".js-hours").forEach((el) => (el.textContent = settings.hours || ""));
     $$(".js-days").forEach((el) => (el.textContent = settings.openDays || ""));
   }

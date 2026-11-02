@@ -80,7 +80,7 @@ window.VITSTORE_PRODUCTS = [
     desc: "អាវយឺតក្រាស់ ២៤០gsm កាត់ត្រង់ Boxy ស្មាធ្លាក់។ ពណ៌បន្លាលឿង ស្រួលរៀបជាមួយខោយីន ឬខោ Cargo។",
     details: [
       "កប្បាស ២៤០gsm ក្រាស់ មិនស្ដើងថ្លាស់",
-      "ស្មាធ្លាក់ Boxy fit តាមស្ទីលស្នួល",
+      "ស្មាធ្លាក់ Boxy fit តាមស្ទីលប្រចាំថ្ងៃ",
       "កអាវយឺតក្រាស់ មិនធូរលឿន",
       "មានគ្រប់ទំហំ ពី S ដល់ XXL"
     ],
@@ -172,7 +172,7 @@ window.VITSTORE_PRODUCTS = [
     image: "assets/products/baggy-denim.jpg",
     badge: "ពេញនិយម",
     tags: ["លក់ដាច់បំផុត"],
-    desc: "ខោយីនជើងធំ ធុនក្រាស់ ពណ៌ប្រផេះលាងទឹក។ ចង្កេះខ្ពស់ល្មម និងជើងធ្លាក់ស្អាត ស័ក្ដិសមនឹងស្ទីលស្នួលបំផុត។",
+    desc: "ខោយីនជើងធំ ធុនក្រាស់ ពណ៌ប្រផេះលាងទឹក។ ចង្កេះខ្ពស់ល្មម និងជើងធ្លាក់ស្អាត ស័ក្ដិសមនឹងស្ទីលប្រចាំថ្ងៃបំផុត។",
     details: [
       "យីន ១២oz ក្រាស់ មិនរួញខ្លាំង",
       "ជើងធំ Wide-leg ធ្លាក់ស្អាត",
@@ -579,7 +579,7 @@ window.VITSTORE_CATEGORIES = [
 window.VITSTORE_LOOKS = [
   {
     id: "look-street",
-    name: "ឈុតស្នួល",
+    name: "ឈុតប្រចាំថ្ងៃ",
     subtitle: "Rue Snuol Street",
     note: "អាវ Batik + ខោ Baggy + មួកប៉ាក់ — ឈុតប្រចាំថ្ងៃដែលមិនចេះចាស់",
     items: ["paisley-shirt", "baggy-denim", "knit-beanie"],
