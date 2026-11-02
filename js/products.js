@@ -30,8 +30,6 @@ window.VITSTORE_PRODUCTS = [
       { name: "ខ្មៅ", hex: "#141416" },
       { name: "ត្នោត", hex: "#4a3527" }
     ],
-    rating: 4.9,
-    reviews: 42,
     sold: 186,
     stock: 7
   },
@@ -61,8 +59,6 @@ window.VITSTORE_PRODUCTS = [
       { name: "ខ្មៅ", hex: "#191a19" },
       { name: "ស្លាទ្បូ", hex: "#6b6250" }
     ],
-    rating: 4.7,
-    reviews: 28,
     sold: 132,
     stock: 4
   },
@@ -92,8 +88,6 @@ window.VITSTORE_PRODUCTS = [
       { name: "ស", hex: "#e9e5dc" },
       { name: "ខ្មៅ", hex: "#151514" }
     ],
-    rating: 4.8,
-    reviews: 64,
     sold: 240,
     stock: 15
   },
@@ -123,8 +117,6 @@ window.VITSTORE_PRODUCTS = [
       { name: "ស", hex: "#eae6dd" },
       { name: "ខ្មៅ", hex: "#171615" }
     ],
-    rating: 4.9,
-    reviews: 19,
     sold: 88,
     stock: 11
   },
@@ -154,8 +146,6 @@ window.VITSTORE_PRODUCTS = [
       { name: "ខ្មៅ", hex: "#1a1918" },
       { name: "ក្រហមឥដ្ឋ", hex: "#8f4436" }
     ],
-    rating: 4.8,
-    reviews: 23,
     sold: 74,
     stock: 6
   },
@@ -187,8 +177,6 @@ window.VITSTORE_PRODUCTS = [
       { name: "ខ្មៅ", hex: "#1c1b1a" },
       { name: "ខៀវចាស់", hex: "#2b3a4e" }
     ],
-    rating: 4.9,
-    reviews: 87,
     sold: 315,
     stock: 5
   },
@@ -218,8 +206,6 @@ window.VITSTORE_PRODUCTS = [
       { name: "ខ្មៅ", hex: "#1b1b19" },
       { name: "បន្លាលឿង", hex: "#8d7d5e" }
     ],
-    rating: 4.7,
-    reviews: 51,
     sold: 203,
     stock: 9
   },
@@ -249,8 +235,6 @@ window.VITSTORE_PRODUCTS = [
       { name: "ខ្មៅ", hex: "#171614" },
       { name: "ប្រផេះ", hex: "#5f5b55" }
     ],
-    rating: 4.6,
-    reviews: 37,
     sold: 158,
     stock: 8
   },
@@ -280,8 +264,6 @@ window.VITSTORE_PRODUCTS = [
       { name: "ខ្មៅ", hex: "#171716" },
       { name: "ត្នោតចាស់", hex: "#4b3a2c" }
     ],
-    rating: 4.8,
-    reviews: 14,
     sold: 46,
     stock: 10
   },
@@ -312,8 +294,6 @@ window.VITSTORE_PRODUCTS = [
       { name: "ខ្មៅ", hex: "#131313" },
       { name: "ត្នោត", hex: "#3f2b1e" }
     ],
-    rating: 5,
-    reviews: 11,
     sold: 32,
     stock: 3
   },
@@ -343,8 +323,6 @@ window.VITSTORE_PRODUCTS = [
       { name: "ខ្មៅ", hex: "#1b1b1b" },
       { name: "ស", hex: "#dcd8cd" }
     ],
-    rating: 4.8,
-    reviews: 33,
     sold: 121,
     stock: 7
   },
@@ -374,8 +352,6 @@ window.VITSTORE_PRODUCTS = [
       { name: "អូលីវ", hex: "#4b4f39" },
       { name: "ប្រផេះ", hex: "#5d5b57" }
     ],
-    rating: 4.7,
-    reviews: 22,
     sold: 67,
     stock: 5
   },
@@ -405,8 +381,6 @@ window.VITSTORE_PRODUCTS = [
       { name: "ប្រផេះ", hex: "#6a6763" },
       { name: "បន្លាលឿង", hex: "#c7b394" }
     ],
-    rating: 4.9,
-    reviews: 58,
     sold: 174,
     stock: 12
   },
@@ -438,8 +412,6 @@ window.VITSTORE_PRODUCTS = [
       { name: "ខ្មៅ", hex: "#161514" },
       { name: "ប្រផេះ", hex: "#6d6a63" }
     ],
-    rating: 4.8,
-    reviews: 76,
     sold: 289,
     stock: 12
   },
@@ -468,8 +440,6 @@ window.VITSTORE_PRODUCTS = [
       { name: "Tortoise", hex: "#7a4a26" },
       { name: "ខ្មៅ", hex: "#141414" }
     ],
-    rating: 4.7,
-    reviews: 21,
     sold: 96,
     stock: 9
   },
@@ -499,8 +469,6 @@ window.VITSTORE_PRODUCTS = [
       { name: "ខ្មៅ", hex: "#1b1a19" },
       { name: "អូលីវ", hex: "#575b40" }
     ],
-    rating: 4.6,
-    reviews: 18,
     sold: 73,
     stock: 6
   },
@@ -529,8 +497,6 @@ window.VITSTORE_PRODUCTS = [
       { name: "បៃតង-មាស", hex: "#1f4a3c" },
       { name: "ក្រហមឥដ្ឋ", hex: "#8a4536" }
     ],
-    rating: 4.5,
-    reviews: 9,
     sold: 41,
     stock: 14
   },
@@ -559,8 +525,6 @@ window.VITSTORE_PRODUCTS = [
       { name: "ខ្មៅ", hex: "#171615" },
       { name: "ត្នោត", hex: "#4a3524" }
     ],
-    rating: 4.7,
-    reviews: 25,
     sold: 104,
     stock: 8
   }

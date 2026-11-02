@@ -39,12 +39,10 @@
   <symbol id="i-drag" viewBox="0 0 24 24"><path d="M8 12H2m0 0 3-3m-3 3 3 3M16 12h6m0 0-3-3m3 3-3 3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   <symbol id="i-send" viewBox="0 0 24 24"><path d="M3.5 11.5 20 4l-7 16.5-2.4-6.2-7.1-2.8Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
   <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8.5" y="8.5" width="11" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M15.5 5.5h-9a2 2 0 0 0-2 2v9" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
-  <symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 2.8v2.4M12 18.8v2.4M2.8 12h2.4M18.8 12h2.4M5.5 5.5l1.7 1.7M16.8 16.8l1.7 1.7M18.5 5.5l-1.7 1.7M7.2 16.8l-1.7 1.7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
   <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4.5 7h15M9.5 7V5h5v2M6.5 7l1 13h9l1-13M10.5 11v5M13.5 11v5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3.5 7h17M3.5 12h17M3.5 17h11" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
   <symbol id="i-arrow-down" viewBox="0 0 24 24"><path d="M12 4v15m0 0 6-6m-6 6-6-6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m16 16 4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
-  <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17l-5.3 2.8 1.1-5.9L3.5 9.8l5.9-.8L12 3.6Z" fill="currentColor"/></symbol>
   <symbol id="i-ruler" viewBox="0 0 24 24"><rect x="2.5" y="8" width="19" height="8" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M7 8v3M11 8v4M15 8v3M19 8v4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
   <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12Z" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="2.8" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
   <symbol id="i-zoom" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m16 16 4.5 4.5M8.5 11h5M11 8.5v5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
@@ -190,7 +188,6 @@
               <option value="new">ថ្មីមុន</option>
               <option value="price-asc">តម្លៃ ទាប → ខ្ពស់</option>
               <option value="price-desc">តម្លៃ ខ្ពស់ → ទាប</option>
-              <option value="rating">ពិន្ទុខ្ពស់</option>
               <option value="popular">លក់ដាច់</option>
             </select>
           </label>
@@ -363,20 +360,6 @@
     </div>
   </section>
 
-  <!-- ═══════════ reviews ═══════════ -->
-  <section class="reviews" id="reviews">
-    <div class="container">
-      <div class="section-head">
-        <div class="section-head__title">
-          <p class="eyebrow"><span class="eyebrow__dot"></span>មតិអតិថិជន</p>
-          <h2 class="section-title">អ្នកទិញនិយាយ <span class="script">អ្វី</span></h2>
-        </div>
-        <p class="section-note">ពិន្ទុមធ្យម ៤.៨ / ៥ ពីអ្នកទិញជាង ៤០០ នាក់ — តាម Telegram។</p>
-      </div>
-      <div class="reviews__grid" id="reviewsGrid"></div>
-    </div>
-  </section>
-
   <!-- ═══════════ FAQ ═══════════ -->
   <section class="faq" id="faq">
     <div class="container faq__grid">
@@ -463,9 +446,6 @@
       <a href="#contact">ទំនាក់ទំនង</a>
     </nav>
     <div class="footer__meta">
-      <button class="link-btn" id="settingsBtn">
-        <svg class="ico"><use href="#i-gear"></use></svg> កំណត់ Telegram
-      </button>
       <p>© <span id="year">2026</span> Vitstore. រក្សាសិទ្ធិគ្រប់យ៉ាង។</p>
     </div>
   </div>
@@ -501,7 +481,6 @@
       <div class="product__scroll">
         <div class="product__top">
           <p class="product__cat" id="pmCat"></p>
-          <div class="product__rating" id="pmRating"></div>
         </div>
         <h3 id="pmTitle"></h3>
         <p class="product__en" id="pmEn"></p>
@@ -676,29 +655,6 @@
       <p class="drawer__note">ចុច «ផ្ញើកម្មង់» នោះ Telegram នឹងបើកជាមួយសារកម្មង់រួចរាល់ — គ្រាន់តែចុច <b>Send</b>។</p>
     </footer>
   </aside>
-</div>
-
-<!-- ═══════════ telegram settings ═══════════ -->
-<div class="modal" id="settingsModal" hidden>
-  <div class="modal__scrim" data-close-settings></div>
-  <div class="modal__panel settings" role="dialog" aria-modal="true" aria-labelledby="settingsTitle">
-    <button class="modal__close" data-close-settings aria-label="បិទ">
-      <svg class="ico"><use href="#i-close"></use></svg>
-    </button>
-    <p class="eyebrow"><span class="eyebrow__dot"></span>សម្រាប់ម្ចាស់ហាង</p>
-    <h3 id="settingsTitle">កំណត់ Telegram របស់ហាង</h3>
-    <p class="settings__lead">
-      ដាក់ username ឬលេខទូរស័ព្ទ Telegram របស់អ្នក (ឧ. <b>vitstore</b> ឬ <b>+85512345678</b>)។
-      សារកម្មង់ទាំងអស់នឹងផ្ញើចូលឆាតនេះ។
-    </p>
-    <label class="field"><span>Telegram username</span><input type="text" id="setUsername" placeholder="vitstore" autocomplete="off"></label>
-    <label class="field"><span>លេខទូរស័ព្ទ (បង្ហាញលើគេហទំព័រ)</span><input type="text" id="setPhone" placeholder="+855 12 345 678" autocomplete="off"></label>
-    <div class="settings__actions">
-      <button class="btn btn--gold btn--block" id="saveSettings">រក្សាទុក</button>
-      <button class="link-btn" id="resetSettings">ត្រឡប់ទៅការកំណត់ដើម</button>
-    </div>
-    <p class="settings__hint">ការកំណត់នេះរក្សាទុកក្នុងកម្មវិធីរុករករបស់អ្នកតែប៉ុណ្ណោះ។ ដើម្បីកំណត់អចិន្ត្រៃយ៍ សូមកែឯកសារ <b>js/config.js</b>។</p>
-  </div>
 </div>
 
 <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>

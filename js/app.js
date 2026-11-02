@@ -8,12 +8,10 @@
   const PRODUCTS = window.VITSTORE_PRODUCTS || [];
   const CATS = window.VITSTORE_CATEGORIES || [];
   const LOOKS = window.VITSTORE_LOOKS || [];
-  const REVIEWS = window.VITSTORE_REVIEWS || [];
   const FAQ = window.VITSTORE_FAQ || [];
 
   const LS_CART = "vitstore_cart_v1";
   const LS_WISH = "vitstore_wish_v1";
-  const LS_SET = "vitstore_settings_v1";
   const LS_BUYER = "vitstore_buyer_v1";
   const LS_RECENT = "vitstore_recent_v1";
 
@@ -175,10 +173,9 @@
     });
 
     const sorters = {
-      new: (a, b) => (Number(b.rating) || 0) - (Number(a.rating) || 0) || (b.sold || 0) - (a.sold || 0),
+      new: (a, b) => (b.sold || 0) - (a.sold || 0),
       "price-asc": (a, b) => a.price - b.price,
       "price-desc": (a, b) => b.price - a.price,
-      rating: (a, b) => (b.rating || 0) - (a.rating || 0) || (b.reviews || 0) - (a.reviews || 0),
       popular: (a, b) => (b.sold || 0) - (a.sold || 0),
       featured: () => 0
     };
@@ -204,15 +201,6 @@
 
   const isWished = (id) => wish.includes(id);
 
-  function stars(rating) {
-    const r = Math.round((Number(rating) || 0) * 2) / 2;
-    let out = "";
-    for (let i = 1; i <= 5; i++) {
-      out += '<svg class="ico star' + (i <= r ? " is-on" : i - 0.5 === r ? " is-half" : "") + '"><use href="#i-star"></use></svg>';
-    }
-    return out;
-  }
-
   function cardHTML(p, i) {
     const badge = p.badge
       ? '<span class="card__badge' + (p.stock <= 0 ? " card__badge--out" : "") + '">' + esc(p.badge) + "</span>"
@@ -236,7 +224,6 @@
           '<div class="card__body">' +
             '<div class="card__top">' +
               '<span class="card__cat">' + esc(catLabel(p.cat)) + "</span>" +
-              '<span class="card__rating">' + stars(p.rating) + "<b>" + String(p.rating || "").replace(".", ".") + "</b></span>" +
             "</div>" +
             '<h3 class="card__name">' + esc(p.name) + "</h3>" +
             '<span class="card__en">' + esc(p.en) + "</span>" +
@@ -605,11 +592,6 @@
     $("#pmDesc").textContent = p.desc;
     $("#pmMeta").textContent = p.material;
 
-    const rating = $("#pmRating");
-    if (rating) {
-      rating.innerHTML = stars(p.rating) + '<b>' + p.rating + "</b><span>(" + p.reviews + " មតិ · លក់ដាច់ " + p.sold + ")</span>";
-    }
-
     const tag = $("#pmTag");
     tag.hidden = !p.badge;
     if (p.badge) tag.textContent = p.badge;
@@ -943,7 +925,7 @@
   });
 
   /* ══════════════════════════════════════════════════
-     LOOKS · REVIEWS · FAQ
+     LOOKS · FAQ
      ══════════════════════════════════════════════════ */
   function renderLooks() {
     const grid = $("#looksGrid");
@@ -990,22 +972,6 @@
     toast("ដាក់ឈុតពេញលេញក្នុងកន្លែងតែម្ដង");
   });
 
-  function renderReviews() {
-    const grid = $("#reviewsGrid");
-    if (!grid) return;
-    grid.innerHTML = REVIEWS.map((r) => (
-      '<article class="review">' +
-        '<div class="review__head">' +
-          '<span class="review__avatar">' + esc(String(r.name).trim().charAt(0)) + "</span>" +
-          "<div><strong>" + esc(r.name) + "</strong><span>" + esc(r.handle) + "</span></div>" +
-          '<span class="review__stars">' + stars(r.rating) + "</span>" +
-        "</div>" +
-        '<p class="review__text">«' + esc(r.text) + "»</p>" +
-        '<div class="review__foot"><span>' + esc(r.item) + "</span><span>" + esc(r.date) + "</span></div>" +
-      "</article>"
-    )).join("");
-  }
-
   function renderFaq() {
     const list = $("#faqList");
     if (!list) return;
@@ -1031,57 +997,10 @@
   });
 
   /* ══════════════════════════════════════════════════
-     SETTINGS
-     ══════════════════════════════════════════════════ */
-  const setModal = $("#settingsModal");
-
-  function openSettings() {
-    lastFocus = document.activeElement;
-    $("#setUsername").value = String(settings.telegram || "");
-    $("#setPhone").value = String(settings.phone || "");
-    setModal.hidden = false;
-    lockBody(true);
-    setTimeout(() => $("#setUsername").focus({ preventScroll: true }), 80);
-  }
-  function closeSettings() {
-    setModal.hidden = true;
-    if (!isAnyOverlayOpen()) lockBody(false);
-    if (lastFocus && lastFocus.focus) lastFocus.focus({ preventScroll: true });
-  }
-  $("#settingsBtn").addEventListener("click", openSettings);
-  $$("[data-close-settings]").forEach((el) => el.addEventListener("click", closeSettings));
-
-  $("#saveSettings").addEventListener("click", () => {
-    const raw = $("#setUsername").value.trim().replace(/\s+/g, "");
-    const u = raw.replace(/^@/, "").replace(/^https?:\/\/(t\.me|telegram\.me)\//i, "");
-    const ph = $("#setPhone").value.trim();
-    if (!u) { toast("សូមដាក់ Telegram username"); return; }
-    if (!/^(\+?\d{8,15}|[a-zA-Z][a-zA-Z0-9_]{3,31})$/.test(u)) {
-      toast("username មិនត្រឹមត្រូវ — ឧ. vitstore ឬ +85512345678");
-      return;
-    }
-    settings.telegram = u;
-    if (ph) settings.phone = ph;
-    write(LS_SET, { telegram: settings.telegram, phone: settings.phone });
-    updateTelegramLinks();
-    closeSettings();
-    toast("រក្សាទុកការកំណត់រួចរាល់");
-  });
-
-  $("#resetSettings").addEventListener("click", () => {
-    try { localStorage.removeItem(LS_SET); } catch (e) {}
-    settings = Object.assign({}, CFG);
-    updateTelegramLinks();
-    $("#setUsername").value = settings.telegram;
-    $("#setPhone").value = settings.phone;
-    toast("ត្រឡប់ទៅការកំណត់ដើម");
-  });
-
-  /* ══════════════════════════════════════════════════
      GLOBAL UI
      ══════════════════════════════════════════════════ */
   function isAnyOverlayOpen() {
-    return !pModal.hidden || !drawer.hidden || !setModal.hidden || (wishDrawer && !wishDrawer.hidden) || (lightbox && !lightbox.hidden);
+    return !pModal.hidden || !drawer.hidden || (wishDrawer && !wishDrawer.hidden) || (lightbox && !lightbox.hidden);
   }
   function lockBody(on) { document.body.classList.toggle("is-locked", on); }
 
@@ -1092,7 +1011,7 @@
         : !pModal.hidden ? pModal.querySelector(".modal__panel")
         : !drawer.hidden ? drawer.querySelector(".drawer__panel")
         : (wishDrawer && !wishDrawer.hidden) ? wishDrawer.querySelector(".drawer__panel")
-        : !setModal.hidden ? setModal.querySelector(".modal__panel") : null;
+        : null;
       if (!panel) return;
       const items = $$(FOCUSABLE, panel).filter((el) => el.offsetParent !== null);
       if (!items.length) return;
@@ -1104,7 +1023,6 @@
     if (e.key !== "Escape") return;
     if (lightbox && !lightbox.hidden) { closeLightbox(); return; }
     if (!pModal.hidden) { closeProduct(); return; }
-    if (!setModal.hidden) { closeSettings(); return; }
     if (wishDrawer && !wishDrawer.hidden) { closeWish(); return; }
     if (!drawer.hidden) { closeCart(); return; }
   });
@@ -1179,8 +1097,6 @@
 
   /* ── boot ──────────────────────────────────────────── */
   function boot() {
-    const savedSet = read(LS_SET, null);
-    if (savedSet) settings = Object.assign(settings, savedSet);
     cart = read(LS_CART, []).filter((it) => product(it.id) && it.qty > 0);
     wish = read(LS_WISH, []).filter((id) => product(id));
     recent = read(LS_RECENT, []).filter((id) => product(id));
@@ -1189,7 +1105,6 @@
     updateTelegramLinks();
     renderFilters();
     renderLooks();
-    renderReviews();
     renderFaq();
     applyFilters();
     renderCart();
