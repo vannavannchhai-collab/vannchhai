@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="km">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vitstore — ខោអាវព្យួរនៅស្នួល | កម្មង់តាម Telegram</title>
+<meta name="description" content="Vitstore — ហាងលក់ខោអាវបុរស និង Unisex នៅស្នួល។ អូសមើលខោអាវព្យួរ ចុចមើលតម្លៃ រើសទំហំ-ពណ៌ ហើយកម្មង់បានភ្លាមៗតាម Telegram ដោយផ្ញើឈុតដែលអ្នករើសចូលឆាតតែម្ដង។">
+<meta name="theme-color" content="#0a0807">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Vitstore — ខោអាវព្យួរនៅស្នួល">
+<meta property="og:description" content="អូសមើលខោអាវ ចុចមើលតម្លៃ កម្មង់តាម Telegram។">
+<meta property="og:image" content="assets/store-bg.jpg">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/kantumruy-pro-khmer-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/kantumruy-pro-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/cormorant-garamond-latin-400-italic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ═══════════ icon sprite ═══════════ -->
+<svg width="0" height="0" style="position:absolute;overflow:hidden" aria-hidden="true" focusable="false">
+  <symbol id="i-telegram" viewBox="0 0 24 24"><path d="M21.7 4.3 2.9 11.6c-1 .4-1 1.8.1 2.1l4.6 1.4 1.8 5.5c.3.9 1.4 1.1 2 .4l2.5-2.6 4.7 3.4c.8.6 1.9.1 2.1-.8l3-14.8c.2-1-.8-1.9-2-1.9Zm-3.9 4.1-6.9 6.2c-.2.2-.4.5-.4.8l-.3 2.8-1.2-3.8 8.3-6.5c.4-.3.9.2.5.5Z"/></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><path d="M6 7h12l1.2 12.1A2 2 0 0 1 17.2 21H6.8a2 2 0 0 1-2-2.1L6 7Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 9V6.4a3 3 0 0 1 6 0V9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-left" viewBox="0 0 24 24"><path d="M14.5 5 8 12l6.5 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-right" viewBox="0 0 24 24"><path d="M9.5 5 16 12l-6.5 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 6.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.5 3.5h3l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.5 5.7 2 2 0 0 1 6.5 3.5Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.6" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 7.5V12l3 2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24"><path d="M2.5 6.5h11v9h-11zM13.5 10h4l3 3v2.5h-7z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><circle cx="6.5" cy="17.5" r="1.8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="17" cy="17.5" r="1.8" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 5 6v6c0 4.2 3 7.6 7 9 4-1.4 7-4.8 7-9V6l-7-3Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 3.5c.7 4.3 2.2 5.8 6.5 6.5-4.3.7-5.8 2.2-6.5 6.5-.7-4.3-2.2-5.8-6.5-6.5 4.3-.7 5.8-2.2 6.5-6.5Z" fill="currentColor"/><path d="M18.5 14.5c.35 2.1 1.1 2.9 3.2 3.2-2.1.35-2.85 1.1-3.2 3.2-.35-2.1-1.1-2.85-3.2-3.2 2.1-.3 2.85-1.1 3.2-3.2Z" fill="currentColor" opacity=".7"/></symbol>
+  <symbol id="i-drag" viewBox="0 0 24 24"><path d="M8 12H2m0 0 3-3m-3 3 3 3M16 12h6m0 0-3-3m3 3-3 3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M3.5 11.5 20 4l-7 16.5-2.4-6.2-7.1-2.8Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8.5" y="8.5" width="11" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M15.5 5.5h-9a2 2 0 0 0-2 2v9" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
+  <symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 2.8v2.4M12 18.8v2.4M2.8 12h2.4M18.8 12h2.4M5.5 5.5l1.7 1.7M16.8 16.8l1.7 1.7M18.5 5.5l-1.7 1.7M7.2 16.8l-1.7 1.7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
+  <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4.5 7h15M9.5 7V5h5v2M6.5 7l1 13h9l1-13M10.5 11v5M13.5 11v5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3.5 7h17M3.5 12h17M3.5 17h11" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+  <symbol id="i-arrow-down" viewBox="0 0 24 24"><path d="M12 4v15m0 0 6-6m-6 6-6-6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<div class="bg-blur" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ═══════════ top bar ═══════════ -->
+<header class="topbar" id="topbar">
+  <div class="topbar__inner">
+    <a class="brand" href="#top" aria-label="Vitstore — ទំព័រដើម">
+      <span class="brand__mark">V</span>
+      <span class="brand__text">
+        <strong>VITSTORE</strong>
+        <small>ខោអាវជ្រើសរើស · ស្នួល</small>
+      </span>
+    </a>
+
+    <nav class="nav" aria-label="ម៉ឺនុយមេ">
+      <a href="#shop">ខោអាវ</a>
+      <a href="#how">របៀបកម្មង់</a>
+      <a href="#about">អំពីហាង</a>
+      <a href="#contact">ទំនាក់ទំនង</a>
+    </nav>
+
+    <div class="topbar__actions">
+      <button class="icon-btn cart-btn" id="cartBtn" aria-label="បើកកន្ត្រក">
+        <svg class="ico"><use href="#i-bag"></use></svg>
+        <span class="cart-count" id="cartCount" hidden>0</span>
+      </button>
+      <a class="btn btn--gold btn--sm topbar__tg" data-telegram target="_blank" rel="noopener">
+        <svg class="ico"><use href="#i-telegram"></use></svg><span>កម្មង់តាម Telegram</span>
+      </a>
+      <button class="icon-btn menu-btn" id="menuBtn" aria-label="បើកម៉ឺនុយ" aria-expanded="false" aria-controls="mobileMenu">
+        <svg class="ico"><use href="#i-menu"></use></svg>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu" hidden>
+    <a href="#shop">ខោអាវ</a>
+    <a href="#how">របៀបកម្មង់</a>
+    <a href="#about">អំពីហាង</a>
+    <a href="#contact">ទំនាក់ទំនង</a>
+    <a class="mobile-menu__tg" data-telegram target="_blank" rel="noopener">
+      <svg class="ico"><use href="#i-telegram"></use></svg> ឆាតជាមួយហាង
+    </a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ═══════════ hero ═══════════ -->
+  <section class="hero">
+    <div class="hero__media" aria-hidden="true"></div>
+    <div class="hero__veil" aria-hidden="true"></div>
+    <div class="container hero__inner">
+      <p class="eyebrow"><span class="eyebrow__dot"></span>ខោអាវថ្មី · ស្ទីលស្នួល</p>
+      <h1 class="hero__title">
+        អូសមើលខោអាវ<br>
+        ព្យួរនៅ <span class="script">Vitstore</span>
+      </h1>
+      <p class="hero__lead">
+        ជ្រើសរើសខោអាវដោយអូសទៅស្ដាំ ឬឆ្វេង — ចុចលើខោអាវដើម្បីមើលតម្លៃ ទំហំ និងពណ៌។
+        កម្មង់បានភ្លាមៗតាម Telegram ដោយផ្ញើឈុតដែលអ្នករើសចូលឆាតហាងតែម្ដង។
+      </p>
+      <div class="hero__actions">
+        <a class="btn btn--gold" href="#shop">
+          អូសមើលខោអាវ
+          <svg class="ico"><use href="#i-right"></use></svg>
+        </a>
+        <button class="btn btn--ghost" data-telegram>
+          <svg class="ico"><use href="#i-telegram"></use></svg>
+          កម្មង់តាម Telegram
+        </button>
+      </div>
+      <dl class="hero__stats">
+        <div><dt>ម៉ូដែលថ្មី</dt><dd>០៨</dd></div>
+        <div><dt>ដឹកជញ្ជូន</dt><dd>២៤ម៉ោង</dd></div>
+        <div><dt>ធានាប្ដូរ</dt><dd>៧ថ្ងៃ</dd></div>
+      </dl>
+    </div>
+    <a class="hero__scroll" href="#shop" aria-label="រំកិលចុះក្រោម">
+      <span>អូសចុះក្រោម</span>
+      <svg class="ico"><use href="#i-arrow-down"></use></svg>
+    </a>
+  </section>
+
+  <!-- ═══════════ ticker ═══════════ -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__track" id="tickerTrack">
+      <span>ដឹកជញ្ជូនឥតគិតថ្លៃ ក្នុងក្រុងស្នួល</span><i>✦</i>
+      <span>ធានាគុណភាព ១០០%</span><i>✦</i>
+      <span>កម្មង់តាម Telegram · ឆ្លើយភ្លាម</span><i>✦</i>
+      <span>ប្ដូរទំនិញបាន ៧ ថ្ងៃ</span><i>✦</i>
+      <span>ខោអាវជ្រើសរើសដោយដៃ</span><i>✦</i>
+    </div>
+  </div>
+
+  <!-- ═══════════ the rail ═══════════ -->
+  <section class="shop" id="shop">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-head__title">
+          <p class="eyebrow"><span class="eyebrow__dot"></span>កាតាឡុក ២០២៦</p>
+          <h2 class="section-title">ខោអាវព្យួរនៅ <span class="script">ស្នួល</span></h2>
+        </div>
+        <p class="section-note">
+          អូសទៅស្ដាំ ឬឆ្វេង ដើម្បីមើលម៉ូដែលផ្សេងទៀត។<br>
+          ចុចលើខោអាវ ដើម្បីមើលតម្លៃ និងកម្មង់។
+        </p>
+      </div>
+
+      <div class="filters" id="filters" role="group" aria-label="ចម្រាញ់តាមប្រភេទ"></div>
+
+      <div class="rail-wrap">
+        <div class="rail-viewport" id="railViewport" tabindex="0" role="region" aria-label="ខោអាវព្យួរ — អូសទៅស្ដាំ ឬឆ្វេងដើម្បីមើល">
+          <div class="rail-track" id="railTrack"></div>
+        </div>
+
+        <div class="rail-bar">
+          <div class="rail-progress" aria-hidden="true"><span id="railProgress"></span></div>
+          <div class="rail-nav">
+            <span class="rail-count" id="railCount">01 / 08</span>
+            <button class="round-btn" id="railPrev" aria-label="ខោអាវមុន">
+              <svg class="ico"><use href="#i-left"></use></svg>
+            </button>
+            <button class="round-btn" id="railNext" aria-label="ខោអាវបន្ទាប់">
+              <svg class="ico"><use href="#i-right"></use></svg>
+            </button>
+          </div>
+        </div>
+
+        <p class="rail-hint">
+          <svg class="ico"><use href="#i-drag"></use></svg>
+          អូសខោអាវទៅស្ដាំ/ឆ្វេង · ចុចលើខោអាវ ដើម្បីមើលតម្លៃ
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ how to order ═══════════ -->
+  <section class="how" id="how">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-head__title">
+          <p class="eyebrow"><span class="eyebrow__dot"></span>របៀបកម្មង់</p>
+          <h2 class="section-title">កម្មង់តែ <span class="script">៣</span> ជំហាន</h2>
+        </div>
+        <p class="section-note">មិនត្រូវការចុះឈ្មោះ មិនត្រូវការកាតឥណទាន — ឆាតមកយើងផ្ទាល់។</p>
+      </div>
+
+      <div class="steps">
+        <article class="step">
+          <span class="step__num">០១</span>
+          <h3>រើសខោអាវ</h3>
+          <p>អូសមើលខោអាវព្យួរ ចុចលើម៉ូដែលដែលអ្នកចូលចិត្ត រួចរើសទំហំ ពណ៌ និងចំនួន។</p>
+        </article>
+        <article class="step">
+          <span class="step__num">០២</span>
+          <h3>ដាក់ក្នុងកន្ត្រក</h3>
+          <p>បន្ថែមបានច្រើនម៉ូដែលក្នុងពេលតែម្ដង — បញ្ជីកម្មង់នឹងបង្ហាញតម្លៃសរុបភ្លាម។</p>
+        </article>
+        <article class="step">
+          <span class="step__num">០៣</span>
+          <h3>ផ្ញើទៅ Telegram</h3>
+          <p>ចុចមួយដង សារកម្មង់រួមទាំងឈ្មោះខោអាវ ទំហំ ពណ៌ និងតម្លៃ នឹងចូលឆាតហាងភ្លាម។</p>
+        </article>
+      </div>
+
+      <div class="how__cta">
+        <p><svg class="ico"><use href="#i-sparkle"></use></svg> មិនចង់រើសខ្លួនឯង? ឆាតមកយើង — យើងជួយរៀបឈុតឱ្យ។</p>
+        <a class="btn btn--gold btn--sm" data-telegram target="_blank" rel="noopener">
+          <svg class="ico"><use href="#i-telegram"></use></svg> ឆាតជាមួយហាង
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ about ═══════════ -->
+  <section class="about" id="about">
+    <div class="container about__grid">
+      <figure class="about__figure">
+        <div class="about__frame">
+          <img src="assets/store-bg.jpg" alt="ម្ចាស់ហាង Vitstore ពាក់អាវ Batik Paisley និងមួកប៉ាក់" loading="lazy">
+          <span class="about__stamp">VIT<br>STORE</span>
+        </div>
+        <figcaption>
+          <span>ឈុត Paisley + Beanie</span>
+          <span>ថតនៅក្នុងហាង · ស្នួល</span>
+        </figcaption>
+      </figure>
+
+      <div class="about__body">
+        <p class="eyebrow"><span class="eyebrow__dot"></span>អំពីហាង</p>
+        <h2 class="section-title">រើសដោយដៃ<br>ពាក់ដោយ<span class="script">ជឿជាក់</span></h2>
+        <p>
+          Vitstore ចាប់ផ្ដើមពីជួរខោអាវព្យួរតូចមួយនៅស្នួល។ យើងជ្រើសរើសម៉ូដែលនីមួយៗដោយផ្ទាល់ដៃ
+          — មើលក្រណាត់ សាកពាក់ និងធានាថាវាស្អាតពិតដូចក្នុងរូប។
+        </p>
+        <p>
+          គ្រប់ម៉ូដែលមានទំហំច្បាស់លាស់ ពណ៌ពិត និងតម្លៃត្រង់។ អ្នកអាចអូសមើលនៅលើគេហទំព័រ
+          ហើយកម្មង់តាម Telegram បានភ្លាម — គ្មានជំហានស្មុគស្មាញ។
+        </p>
+        <ul class="about__list">
+          <li><svg class="ico"><use href="#i-check"></use></svg>ក្រណាត់ជ្រើសរើស ធន់ និងមិនរលាស់ពណ៌</li>
+          <li><svg class="ico"><use href="#i-check"></use></svg>រូបភាពពិតពីហាង ១០០%</li>
+          <li><svg class="ico"><use href="#i-check"></use></svg>ប្ដូរទំហំបានក្នុង ៧ ថ្ងៃ</li>
+        </ul>
+        <div class="about__badges">
+          <span><svg class="ico"><use href="#i-shield"></use></svg>ធានាគុណភាព</span>
+          <span><svg class="ico"><use href="#i-truck"></use></svg>ដឹកជញ្ជូនរហ័ស</span>
+          <span><svg class="ico"><use href="#i-telegram"></use></svg>កម្មង់តាម Telegram</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ contact ═══════════ -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-head__title">
+          <p class="eyebrow"><span class="eyebrow__dot"></span>ទំនាក់ទំនង</p>
+          <h2 class="section-title">និយាយជាមួយ <span class="script">យើង</span></h2>
+        </div>
+        <p class="section-note">ឆ្លើយតបរាល់ថ្ងៃ ម៉ោង ៨:០០ ព្រឹក — ៨:០០ ល្ងាច។</p>
+      </div>
+
+      <div class="contact__grid">
+        <a class="contact-card contact-card--tg" data-telegram target="_blank" rel="noopener">
+          <span class="contact-card__ico"><svg class="ico"><use href="#i-telegram"></use></svg></span>
+          <span class="contact-card__label">Telegram</span>
+          <strong id="contactTg">@vitstore</strong>
+          <span class="contact-card__hint">ចុចដើម្បីឆាត · កម្មង់បានភ្លាម</span>
+        </a>
+        <a class="contact-card" id="contactPhoneCard" href="tel:+855">
+          <span class="contact-card__ico"><svg class="ico"><use href="#i-phone"></use></svg></span>
+          <span class="contact-card__label">ទូរស័ព្ទ</span>
+          <strong id="contactPhone">+855 00 000 000</strong>
+          <span class="contact-card__hint">ហៅ ឬ ផ្ញើសារ</span>
+        </a>
+        <div class="contact-card">
+          <span class="contact-card__ico"><svg class="ico"><use href="#i-pin"></use></svg></span>
+          <span class="contact-card__label">ទីតាំងហាង</span>
+          <strong id="contactAddr">ស្នួល, ក្រចេះ</strong>
+          <span class="contact-card__hint">មកសាកពាក់នៅហាង</span>
+        </div>
+        <div class="contact-card">
+          <span class="contact-card__ico"><svg class="ico"><use href="#i-clock"></use></svg></span>
+          <span class="contact-card__label">ម៉ោងបើក</span>
+          <strong class="js-hours">៨:០០ — ២០:០០</strong>
+          <span class="contact-card__hint js-days">រាល់ថ្ងៃ (ច័ន្ទ — អាទិត្យ)</span>
+        </div>
+      </div>
+
+      <div class="contact__cta">
+        <div class="contact__cta-bg" aria-hidden="true"></div>
+        <div class="contact__cta-inner">
+          <div class="contact__cta-text">
+            <p class="eyebrow"><span class="eyebrow__dot"></span>ឈុតដែលអ្នកចូលចិត្ត</p>
+            <h3>ផ្ញើមកយើងតាម <span class="script">Telegram</span><br>ហើយយើងរៀបជូនភ្លាម។</h3>
+          </div>
+          <button class="btn btn--gold" data-telegram>
+            <svg class="ico"><use href="#i-telegram"></use></svg> ចាប់ផ្ដើមឆាត
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <span class="brand__mark brand__mark--sm">V</span>
+      <div>
+        <strong>VITSTORE</strong>
+        <p>ខោអាវជ្រើសរើស · ស្នួល, ក្រចេះ</p>
+      </div>
+    </div>
+    <nav class="footer__nav" aria-label="ម៉ឺនុយផ្នែកខាងក្រោម">
+      <a href="#shop">ខោអាវ</a>
+      <a href="#how">របៀបកម្មង់</a>
+      <a href="#about">អំពីហាង</a>
+      <a href="#contact">ទំនាក់ទំនង</a>
+    </nav>
+    <div class="footer__meta">
+      <button class="link-btn" id="settingsBtn">
+        <svg class="ico"><use href="#i-gear"></use></svg> កំណត់ Telegram
+      </button>
+      <p>© <span id="year">2026</span> Vitstore. រក្សាសិទ្ធិគ្រប់យ៉ាង។</p>
+    </div>
+  </div>
+</footer>
+
+<a class="fab" data-telegram target="_blank" rel="noopener" aria-label="ឆាតតាម Telegram">
+  <svg class="ico"><use href="#i-telegram"></use></svg>
+  <span>ឆាត</span>
+</a>
+
+<!-- ═══════════ product modal ═══════════ -->
+<div class="modal" id="productModal" hidden>
+  <div class="modal__scrim" data-close-product></div>
+  <div class="modal__panel product" role="dialog" aria-modal="true" aria-labelledby="pmTitle">
+    <button class="modal__close" data-close-product aria-label="បិទ">
+      <svg class="ico"><use href="#i-close"></use></svg>
+    </button>
+
+    <div class="product__media">
+      <img id="pmImage" src="" alt="">
+      <span class="product__tag" id="pmTag" hidden></span>
+      <div class="product__stock" id="pmStock"></div>
+    </div>
+
+    <div class="product__body">
+      <div class="product__scroll">
+        <p class="product__cat" id="pmCat"></p>
+        <h3 id="pmTitle"></h3>
+        <p class="product__en" id="pmEn"></p>
+
+        <div class="product__price">
+          <strong id="pmPrice"></strong>
+          <del id="pmOld" hidden></del>
+          <span id="pmRiel"></span>
+        </div>
+
+        <p class="product__desc" id="pmDesc"></p>
+
+        <div class="opt">
+          <div class="opt__head"><span>ទំហំ</span><em id="pmSizeVal"></em></div>
+          <div class="size-list" id="pmSizes"></div>
+        </div>
+
+        <div class="opt">
+          <div class="opt__head"><span>ពណ៌</span><em id="pmColorVal"></em></div>
+          <div class="color-list" id="pmColors"></div>
+        </div>
+
+        <div class="opt">
+          <div class="opt__head"><span>ចំនួន</span><em id="pmQtyVal"></em></div>
+          <div class="qty" data-qty="modal">
+            <button type="button" data-step="-1" aria-label="បន្ថយចំនួន"><svg class="ico"><use href="#i-minus"></use></svg></button>
+            <span id="pmQty">1</span>
+            <button type="button" data-step="1" aria-label="បន្ថែមចំនួន"><svg class="ico"><use href="#i-plus"></use></svg></button>
+          </div>
+        </div>
+
+        <p class="product__meta" id="pmMeta"></p>
+      </div>
+
+      <div class="product__actions">
+        <button class="btn btn--gold btn--block" id="pmOrder">
+          <svg class="ico"><use href="#i-telegram"></use></svg> កម្មង់ភ្លាមៗ · Telegram
+        </button>
+        <button class="btn btn--ghost btn--block" id="pmAdd">
+          <svg class="ico"><use href="#i-bag"></use></svg> ដាក់ក្នុងកន្ត្រក
+        </button>
+        <p class="product__note">សារកម្មង់នឹងផ្ញើឈ្មោះខោអាវ ទំហំ ពណ៌ និងតម្លៃ ចូលឆាតហាងដោយស្វ័យប្រវត្តិ។</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════ cart drawer ═══════════ -->
+<div class="drawer" id="cartDrawer" hidden>
+  <div class="drawer__scrim" data-close-cart></div>
+  <aside class="drawer__panel" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+    <header class="drawer__head">
+      <div>
+        <h3 id="cartTitle">កន្ត្រករបស់អ្នក</h3>
+        <p id="cartSub">រើសខោអាវដែលអ្នកចង់បាន</p>
+      </div>
+      <button class="icon-btn" data-close-cart aria-label="បិទកន្ត្រក">
+        <svg class="ico"><use href="#i-close"></use></svg>
+      </button>
+    </header>
+
+    <div class="drawer__body">
+      <div class="cart-empty" id="cartEmpty">
+        <svg class="ico"><use href="#i-bag"></use></svg>
+        <p>កន្ត្រកនៅទទេ</p>
+        <span>អូសមើលខោអាវ រួចចុច «ដាក់ក្នុងកន្ត្រក»</span>
+        <button class="btn btn--ghost btn--sm" id="emptyShopBtn">មើលខោអាវ</button>
+      </div>
+      <div class="cart-items" id="cartItems"></div>
+
+      <div class="cart-form" id="cartForm" hidden>
+        <p class="cart-form__title">ព័ត៌មានអ្នកទិញ <span>(ស្រេចចិត្ត)</span></p>
+        <label class="field"><span>ឈ្មោះ</span><input type="text" id="cName" autocomplete="name" placeholder="ឧ. សុខ ដារា"></label>
+        <label class="field"><span>ទូរស័ព្ទ / Telegram</span><input type="tel" id="cPhone" autocomplete="tel" placeholder="ឧ. 012 345 678"></label>
+        <label class="field"><span>អាសយដ្ឋានដឹកជញ្ជូន</span><input type="text" id="cAddr" autocomplete="street-address" placeholder="ភូមិ/ឃុំ/ក្រុង"></label>
+        <label class="field"><span>កំណត់ចំណាំ</span><textarea id="cNote" rows="2" placeholder="ឧ. ចង់បានមុនថ្ងៃទី ១៥"></textarea></label>
+      </div>
+    </div>
+
+    <footer class="drawer__foot" id="cartFoot" hidden>
+      <div class="cart-total">
+        <div><span>សរុប</span><small id="cartRiel"></small></div>
+        <strong id="cartTotal">$0.00</strong>
+      </div>
+      <button class="btn btn--gold btn--block" id="sendTelegram">
+        <svg class="ico"><use href="#i-telegram"></use></svg> ផ្ញើកម្មង់ទៅ Telegram
+      </button>
+      <div class="drawer__foot-row">
+        <button class="btn btn--ghost btn--sm" id="shareImages">
+          <svg class="ico"><use href="#i-send"></use></svg> ផ្ញើរូបភាព + សារ
+        </button>
+        <button class="btn btn--ghost btn--sm" id="copyMsg">
+          <svg class="ico"><use href="#i-copy"></use></svg> ចម្លងសារ
+        </button>
+        <button class="btn btn--ghost btn--sm btn--danger" id="clearCart" aria-label="សម្អាតកន្ត្រក">
+          <svg class="ico"><use href="#i-trash"></use></svg>
+        </button>
+      </div>
+      <p class="drawer__note">ចុច «ផ្ញើកម្មង់» នោះ Telegram នឹងបើកជាមួយសារកម្មង់រួចរាល់ — គ្រាន់តែចុច <b>Send</b>។</p>
+    </footer>
+  </aside>
+</div>
+
+<!-- ═══════════ telegram settings ═══════════ -->
+<div class="modal" id="settingsModal" hidden>
+  <div class="modal__scrim" data-close-settings></div>
+  <div class="modal__panel settings" role="dialog" aria-modal="true" aria-labelledby="settingsTitle">
+    <button class="modal__close" data-close-settings aria-label="បិទ">
+      <svg class="ico"><use href="#i-close"></use></svg>
+    </button>
+    <p class="eyebrow"><span class="eyebrow__dot"></span>សម្រាប់ម្ចាស់ហាង</p>
+    <h3 id="settingsTitle">កំណត់ Telegram របស់ហាង</h3>
+    <p class="settings__lead">
+      ដាក់ username ឬលេខទូរស័ព្ទ Telegram របស់អ្នក (ឧ. <b>vitstore</b> ឬ <b>+85512345678</b>)។
+      សារកម្មង់ទាំងអស់នឹងផ្ញើចូលឆាតនេះ។
+    </p>
+    <label class="field"><span>Telegram username</span><input type="text" id="setUsername" placeholder="vitstore" autocomplete="off"></label>
+    <label class="field"><span>លេខទូរស័ព្ទ (បង្ហាញលើគេហទំព័រ)</span><input type="text" id="setPhone" placeholder="+855 12 345 678" autocomplete="off"></label>
+    <div class="settings__actions">
+      <button class="btn btn--gold btn--block" id="saveSettings">រក្សាទុក</button>
+      <button class="link-btn" id="resetSettings">ត្រឡប់ទៅការកំណត់ដើម</button>
+    </div>
+    <p class="settings__hint">ការកំណត់នេះរក្សាទុកក្នុងកម្មវិធីរុករករបស់អ្នកតែប៉ុណ្ណោះ។ ដើម្បីកំណត់អចិន្ត្រៃយ៍ សូមកែឯកសារ <b>js/config.js</b>។</p>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<script src="js/config.js"></script>
+<script src="js/products.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
